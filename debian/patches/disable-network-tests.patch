@@ -1,0 +1,85 @@
+Index: golang-github-bsphere-le-go/le_test.go
+===================================================================
+--- golang-github-bsphere-le-go.orig/le_test.go
++++ golang-github-bsphere-le-go/le_test.go
+@@ -8,6 +8,8 @@ import (
+ )
+ 
+ func TestConnectOpensConnection(t *testing.T) {
++	t.Skip("DM: network access disabled")
++
+ 	le, err := Connect("")
+ 	if err != nil {
+ 		t.Fatal(err)
+@@ -25,6 +27,8 @@ func TestConnectOpensConnection(t *testi
+ }
+ 
+ func TestConnectSetsToken(t *testing.T) {
++	t.Skip("DM: network access disabled")
++
+ 	le, err := Connect("myToken")
+ 	if err != nil {
+ 		t.Fatal(err)
+@@ -38,6 +42,8 @@ func TestConnectSetsToken(t *testing.T)
+ }
+ 
+ func TestCloseClosesConnection(t *testing.T) {
++	t.Skip("DM: network access disabled")
++
+ 	le, err := Connect("")
+ 	if err != nil {
+ 		t.Fatal(err)
+@@ -51,6 +57,8 @@ func TestCloseClosesConnection(t *testin
+ }
+ 
+ func TestOpenConnectionOpensConnection(t *testing.T) {
++	t.Skip("DM: network access disabled")
++
+ 	le, err := Connect("")
+ 	if err != nil {
+ 		t.Fatal(err)
+@@ -66,6 +74,8 @@ func TestOpenConnectionOpensConnection(t
+ }
+ 
+ func TestEnsureOpenConnectionDoesNothingOnOpenConnection(t *testing.T) {
++	t.Skip("DM: network access disabled")
++
+ 	le, err := Connect("")
+ 	if err != nil {
+ 		t.Fatal(err)
+@@ -82,6 +92,8 @@ func TestEnsureOpenConnectionDoesNothing
+ }
+ 
+ func TestEnsureOpenConnectionCreatesNewConnection(t *testing.T) {
++	t.Skip("DM: network access disabled")
++
+ 	le, err := Connect("")
+ 	if err != nil {
+ 		t.Fatal(err)
+@@ -133,6 +145,8 @@ func TestSetPrefixSetsPrefix(t *testing.
+ }
+ 
+ func TestLoggerImplementsWriterInterface(t *testing.T) {
++	t.Skip("DM: network access disabled")
++
+ 	le, err := Connect("myToken")
+ 	if err != nil {
+ 		t.Fatal(err)
+@@ -145,6 +159,8 @@ func TestLoggerImplementsWriterInterface
+ }
+ 
+ func TestReplaceNewline(t *testing.T) {
++	t.Skip("DM: network access disabled")
++
+ 	le, err := Connect("myToken")
+ 	if err != nil {
+ 		t.Fatal(err)
+@@ -160,6 +176,8 @@ func TestReplaceNewline(t *testing.T) {
+ }
+ 
+ func TestAddNewline(t *testing.T) {
++	t.Skip("DM: network access disabled")
++
+ 	le, err := Connect("myToken")
+ 	if err != nil {
+ 		t.Fatal(err)
